@@ -12,10 +12,11 @@ import rain from '../assets/rain.webp'
 
 function Forcast() {
   return (
-    <div>
-      <div className="flex  mt-10 ">
+    <div className='flex gap-5 mt-10'>
+      <div className="grid  gap-2 ml-25 ">
+        {/* COUNTRY, DATE & TIME */}
         <div
-          className="bg-no-repeat w-full h-100  ml-25 pt-30 pl-8"
+          className="bg-no-repeat w-full h-80  pt-25 pl-8"
           style={{
             backgroundImage: `url(${large})`,
           }}
@@ -33,109 +34,256 @@ function Forcast() {
           </div>
         </div>
 
-        <div className="backdrop-blur-lg bg-black/20 border border-white/10 shadow-lg w-120 h-140 rounded-xl mr-25 p-5 text-lg font-semibold text-white">
-          <div className="flex justify-between">
-            <h1>hourly forcast</h1>
+        {/* CONDITONS */}
+        <div className="flex gap-6 -mt-5 text-white">
+          <div
+            className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
+            shadow-md rounded-xl p-3  grid gap-2 pr-15 "
+          >
+            <h1>Feels like</h1>
+            <span className="text-2xl font-semibold">68°</span>
+          </div>
+
+          <div
+            className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
+            shadow-md rounded-xl p-3 pr-15  grid gap-2"
+          >
+            <h1>Feels like</h1>
+            <span className="text-2xl font-semibold">68°</span>
+          </div>
+
+          <div
+            className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
+            shadow-md rounded-xl p-3 pr-15 grid gap-2"
+          >
+            <h1>Feels like</h1>
+            <span className="text-2xl font-semibold">68°</span>
+          </div>
+
+          <div
+            className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
+            shadow-md rounded-xl p-3 pr-15 grid gap-2"
+          >
+            <h1>Feels like</h1>
+            <span className="text-2xl font-semibold">68°</span>
+          </div>
+
+          <div
+            className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
+            shadow-md rounded-xl p-3 pr-15 grid gap-2"
+          >
+            <h1>Feels like</h1>
+            <span className="text-2xl font-semibold">68°</span>
+          </div>
+        </div>
+
+        {/* DAILY FORCAST */}
+        <div className="mt-2">
+          <h1 className="text-white text-base font-semibold pb-3">
+            Daily Forcast
+          </h1>
+          <div className="flex gap-5.5 text-white">
+            <div
+              className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
+            shadow-md rounded-xl p-4  grid  gap-4  "
+            >
+              <h1>Tue</h1>
+              <img src={rain} alt="" className="w-10" />
+              <div className="flex gap-3 text-xs">
+                <span>57°</span>
+                <span>68°</span>
+              </div>
+            </div>
 
             <div
-              className="flex gap-2 text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
-            shadow-md rounded-xl p-2 transition-all duration-400 hover:scale-103 cursor-pointer"
+              className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
+            shadow-md rounded-xl p-4  grid  gap-4  "
             >
-              <span>Tuesday</span>
-              <img src={drop} alt="" />
+              <h1>Wed</h1>
+              <img src={snow} alt="" className="w-10" />
+              <div className="flex gap-3 text-xs">
+                <span>57°</span>
+                <span>68°</span>
+              </div>
             </div>
-          </div>
 
-          <div
-            className="flex justify-between backdrop-blur-xl bg-blue-600/20 border border-blue-300/30 
-            shadow-xl rounded-xl p-2 my-2.5 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
-          >
-            <div className="flex gap-2">
-              <img src={overcast} alt="" className="w-8" />
-              <p>3 PM</p>
+            <div
+              className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
+            shadow-md rounded-xl p-4  grid  gap-4  "
+            >
+              <h1>Thurs</h1>
+              <img src={storm} alt="" className="w-10" />
+              <div className="flex gap-3 text-xs">
+                <span>57°</span>
+                <span>68°</span>
+              </div>
             </div>
-            <span className="text-base font-light">68°</span>
-          </div>
 
-          <div
-            className="flex justify-between backdrop-blur-xl bg-blue-600/20 border border-blue-300/30 
-            shadow-xl rounded-xl p-2 my-2.5 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
-          >
-            <div className="flex gap-2">
-              <img src={partly} alt="" className="w-8" />
-              <p>4 PM</p>
+            <div
+              className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
+            shadow-md rounded-xl p-4  grid  gap-4  "
+            >
+              <h1>Fri</h1>
+              <img src={sunny} alt="" className="w-10" />
+              <div className="flex gap-3 text-xs">
+                <span>57°</span>
+                <span>68°</span>
+              </div>
             </div>
-            <span className="text-base font-light">68°</span>
-          </div>
 
-          <div
-            className="flex justify-between backdrop-blur-xl bg-blue-600/20 border border-blue-300/30 
-            shadow-xl rounded-xl p-2 my-2.5 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
-          >
-            <div className="flex gap-2">
-              <img src={sunny} alt="" className="w-8" />
-              <p>5 PM</p>
+            <div
+              className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
+            shadow-md rounded-xl p-4  grid  gap-4  "
+            >
+              <h1>Sat</h1>
+              <img src={partly} alt="" className="w-10" />
+              <div className="flex gap-3 text-xs">
+                <span>57°</span>
+                <span>68°</span>
+              </div>
             </div>
-            <span className="text-base font-light">68°</span>
-          </div>
 
-          <div
-            className="flex justify-between backdrop-blur-xl bg-blue-600/20 border border-blue-300/30 
-            shadow-xl rounded-xl p-2 my-2.5 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
-          >
-            <div className="flex gap-2">
-              <img src={snow} alt="" className="w-8" />
-              <p>6 PM</p>
+            <div
+              className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
+            shadow-md rounded-xl p-4  grid  gap-4  "
+            >
+              <h1>Sun</h1>
+              <img src={overcast} alt="" className="w-10" />
+              <div className="flex gap-3 text-xs">
+                <span>57°</span>
+                <span>68°</span>
+              </div>
             </div>
-            <span className="text-base font-light">68°</span>
-          </div>
 
-          <div
-            className="flex justify-between backdrop-blur-xl bg-blue-600/20 border border-blue-300/30 
-            shadow-xl rounded-xl p-2 my-2.5 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
-          >
-            <div className="flex gap-2">
-              <img src={storm} alt="" className="w-8" />
-              <p>7 PM</p>
+            <div
+              className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
+            shadow-md rounded-xl p-4  grid  gap-4  "
+            >
+              <h1>Mon</h1>
+              <img src={rain} alt="" className="w-10" />
+              <div className="flex gap-3 text-xs">
+                <span>57°</span>
+                <span>68°</span>
+              </div>
             </div>
-            <span className="text-base font-light">68°</span>
-          </div>
 
-          <div
-            className="flex justify-between backdrop-blur-xl bg-blue-600/20 border border-blue-300/30 
-            shadow-xl rounded-xl p-2 my-2.5 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
-          >
-            <div className="flex gap-2">
-              <img src={drizzle} alt="" className="w-8" />
-              <p>8 PM</p>
+            <div
+              className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
+            shadow-md rounded-xl p-4  grid  gap-4  "
+            >
+              <h1>Tue</h1>
+              <img src={sunny} alt="" className="w-10" />
+              <div className="flex gap-3 text-xs">
+                <span>57°</span>
+                <span>68°</span>
+              </div>
             </div>
-            <span className="text-base font-light">68°</span>
-          </div>
-
-          <div
-            className="flex justify-between backdrop-blur-xl bg-blue-600/20 border border-blue-300/30 
-            shadow-xl rounded-xl p-2 my-2.5 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
-          >
-            <div className="flex gap-2">
-              <img src={sunny} alt="" className="w-8" />
-              <p>9 PM</p>
-            </div>
-            <span className="text-base font-light">68°</span>
-          </div>
-
-          <div
-            className="flex justify-between backdrop-blur-xl bg-blue-600/20 border border-blue-300/30 
-            shadow-xl rounded-xl p-2 my-2.5 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
-          >
-            <div className="flex gap-2">
-              <img src={rain} alt="" className="w-8" />
-              <p>10 PM</p>
-            </div>
-            <span className="text-base font-light">68°</span>
           </div>
         </div>
       </div>
 
+      {/* HOURLY FORCAST */}
+      <div className="backdrop-blur-lg bg-black/20 border border-white/10 shadow-lg w-120 h-150 rounded-xl mr-25 p-5 text-lg font-semibold text-white">
+        <div className="flex justify-between">
+          <h1>hourly forcast</h1>
+
+          <div
+            className="flex gap-2 text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
+            shadow-md rounded-xl p-2 transition-all duration-400 hover:scale-103 cursor-pointer"
+          >
+            <span>Tuesday</span>
+            <img src={drop} alt="" />
+          </div>
+        </div>
+
+        <div
+          className="flex justify-between backdrop-blur-xl bg-blue-600/20 border border-blue-300/30 
+            shadow-xl rounded-xl p-2 my-3 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+        >
+          <div className="flex gap-2">
+            <img src={overcast} alt="" className="w-8" />
+            <p>3 PM</p>
+          </div>
+          <span className="text-base font-light">68°</span>
+        </div>
+
+        <div
+          className="flex justify-between backdrop-blur-xl bg-blue-600/20 border border-blue-300/30 
+            shadow-xl rounded-xl p-2 my-3 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+        >
+          <div className="flex gap-2">
+            <img src={partly} alt="" className="w-8" />
+            <p>4 PM</p>
+          </div>
+          <span className="text-base font-light">68°</span>
+        </div>
+
+        <div
+          className="flex justify-between backdrop-blur-xl bg-blue-600/20 border border-blue-300/30 
+            shadow-xl rounded-xl p-2 my-3 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+        >
+          <div className="flex gap-2">
+            <img src={sunny} alt="" className="w-8" />
+            <p>5 PM</p>
+          </div>
+          <span className="text-base font-light">68°</span>
+        </div>
+
+        <div
+          className="flex justify-between backdrop-blur-xl bg-blue-600/20 border border-blue-300/30 
+            shadow-xl rounded-xl p-2 my-3 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+        >
+          <div className="flex gap-2">
+            <img src={snow} alt="" className="w-8" />
+            <p>6 PM</p>
+          </div>
+          <span className="text-base font-light">68°</span>
+        </div>
+
+        <div
+          className="flex justify-between backdrop-blur-xl bg-blue-600/20 border border-blue-300/30 
+            shadow-xl rounded-xl p-2 my-3 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+        >
+          <div className="flex gap-2">
+            <img src={storm} alt="" className="w-8" />
+            <p>7 PM</p>
+          </div>
+          <span className="text-base font-light">68°</span>
+        </div>
+
+        <div
+          className="flex justify-between backdrop-blur-xl bg-blue-600/20 border border-blue-300/30 
+            shadow-xl rounded-xl p-2 my-3 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+        >
+          <div className="flex gap-2">
+            <img src={drizzle} alt="" className="w-8" />
+            <p>8 PM</p>
+          </div>
+          <span className="text-base font-light">68°</span>
+        </div>
+
+        <div
+          className="flex justify-between backdrop-blur-xl bg-blue-600/20 border border-blue-300/30 
+            shadow-xl rounded-xl p-2 my-3 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+        >
+          <div className="flex gap-2">
+            <img src={sunny} alt="" className="w-8" />
+            <p>9 PM</p>
+          </div>
+          <span className="text-base font-light">68°</span>
+        </div>
+
+        <div
+          className="flex justify-between backdrop-blur-xl bg-blue-600/20 border border-blue-300/30 
+            shadow-xl rounded-xl p-2 my-3 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+        >
+          <div className="flex gap-2">
+            <img src={rain} alt="" className="w-8" />
+            <p>10 PM</p>
+          </div>
+          <span className="text-base font-light">68°</span>
+        </div>
+      </div>
 
 
     </div>
