@@ -8,11 +8,16 @@ import snow from '../assets/snow.webp'
 import drizzle from '../assets/drizzle.webp'
 import storm from '../assets/storm.webp'
 import rain from '../assets/rain.webp'
+import { useState } from 'react'
 
 
 function Forcast() {
+ const [click, setClick] = useState(!false)
+  
+
+
   return (
-    <div className='flex gap-5 mt-10'>
+    <div className="flex gap-5 mt-10">
       <div className="grid  gap-2 ml-25 ">
         {/* COUNTRY, DATE & TIME */}
         <div
@@ -35,10 +40,10 @@ function Forcast() {
         </div>
 
         {/* CONDITONS */}
-        <div className="flex gap-6 -mt-5 text-white">
+        <div className="flex gap-6 -mt-5 text-white ">
           <div
             className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
-            shadow-md rounded-xl p-3  grid gap-2 pr-15 "
+            shadow-md rounded-xl p-3  grid gap-2 pr-25 "
           >
             <h1>Feels like</h1>
             <span className="text-2xl font-semibold">68°</span>
@@ -46,34 +51,26 @@ function Forcast() {
 
           <div
             className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
-            shadow-md rounded-xl p-3 pr-15  grid gap-2"
+            shadow-md rounded-xl p-3 pr-25  grid gap-2"
           >
-            <h1>Feels like</h1>
-            <span className="text-2xl font-semibold">68°</span>
+            <h1>Humidity</h1>
+            <span className="text-2xl font-semibold">46%</span>
           </div>
 
           <div
             className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
-            shadow-md rounded-xl p-3 pr-15 grid gap-2"
+            shadow-md rounded-xl p-3 pr-25 grid gap-2"
           >
-            <h1>Feels like</h1>
-            <span className="text-2xl font-semibold">68°</span>
+            <h1>Wind</h1>
+            <span className="text-2xl font-semibold">14km/h</span>
           </div>
 
           <div
             className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
-            shadow-md rounded-xl p-3 pr-15 grid gap-2"
+            shadow-md rounded-xl p-3 pr-25 grid gap-2"
           >
-            <h1>Feels like</h1>
-            <span className="text-2xl font-semibold">68°</span>
-          </div>
-
-          <div
-            className=" text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
-            shadow-md rounded-xl p-3 pr-15 grid gap-2"
-          >
-            <h1>Feels like</h1>
-            <span className="text-2xl font-semibold">68°</span>
+            <h1>Precipitation</h1>
+            <span className="text-2xl font-semibold">0mm</span>
           </div>
         </div>
 
@@ -183,16 +180,21 @@ function Forcast() {
       </div>
 
       {/* HOURLY FORCAST */}
-      <div className="backdrop-blur-lg bg-black/20 border border-white/10 shadow-lg w-120 h-150 rounded-xl mr-25 p-5 text-lg font-semibold text-white">
-        <div className="flex justify-between">
+      <div className="backdrop-blur-lg bg-black/20 border border-white/10 shadow-lg w-120 h-150 rounded-xl mr-25 p-5 text-lg font-semibold text-white ">
+        <div className="flex justify-between ">
           <h1>hourly forcast</h1>
 
           <div
             className="flex gap-2 text-sm backdrop-blur-xl bg-blue-100/10 border border-blue-100/30 
-            shadow-md rounded-xl p-2 transition-all duration-400 hover:scale-103 cursor-pointer"
+            shadow-md rounded-xl p-2 transition-all duration-400 hover:scale-103 "
           >
             <span>Tuesday</span>
-            <img src={drop} alt="" />
+            <img
+              src={drop}
+              alt=""
+              className="cursor-pointer"
+              onClick={() => setClick(!click)}
+            />
           </div>
         </div>
 
@@ -283,9 +285,61 @@ function Forcast() {
           </div>
           <span className="text-base font-light">68°</span>
         </div>
+
+        {/* DROPDOWN             */}
+        {click && (
+          <div className="absolute p-2 pr-2 w-50 right-4 backdrop-blur-xl bg-white/10 border border-white/20   shadow-lg  top-16 rounded-xl z-50 text-base ">
+            <div
+              className=" pb-2 hover:backdrop-blur-xl hover:bg-blue-500/10 hover:border hover:border-blue-200/20 
+            hover:shadow-lg hover:rounded-sm hover:p-1"
+            >
+              <h1>Monday </h1>
+            </div>
+
+            <div
+              className="pb-2 hover:backdrop-blur-xl hover:bg-blue-500/10 hover:border hover:border-blue-200/20 
+            hover:shadow-lg hover:rounded-sm hover:p-1"
+            >
+              <h1>Tuesday </h1>
+            </div>
+
+            <div
+              className="pb-2 hover:backdrop-blur-xl hover:bg-blue-500/10 hover:border hover:border-blue-200/20 
+            hover:shadow-lg hover:rounded-sm hover:p-1"
+            >
+              <h1>Wednesday </h1>
+            </div>
+
+            <div
+              className="pb-2 hover:backdrop-blur-xl hover:bg-blue-500/10 hover:border hover:border-blue-200/20 
+            hover:shadow-lg hover:rounded-sm hover:p-1"
+            >
+              <h1>Thursday </h1>
+            </div>
+
+            <div
+              className="pb-2 hover:backdrop-blur-xl hover:bg-blue-500/10 hover:border hover:border-blue-200/20 
+            hover:shadow-lg hover:rounded-sm hover:p-1"
+            >
+              <h1>Friday </h1>
+            </div>
+
+            <div
+              className="pb-2 hover:backdrop-blur-xl hover:bg-blue-500/10 hover:border hover:border-blue-200/20 
+            hover:shadow-lg hover:rounded-sm hover:p-1"
+            >
+              <h1>Saturday </h1>
+            </div>
+
+            <div
+              className="pb-2 hover:backdrop-blur-xl hover:bg-blue-500/10 hover:border hover:border-blue-200/20 
+            hover:shadow-lg hover:rounded-sm hover:p-1"
+            >
+              <h1>Sunday </h1>
+            </div>
+          </div>
+        )}
       </div>
-
-
     </div>
   );
 }
