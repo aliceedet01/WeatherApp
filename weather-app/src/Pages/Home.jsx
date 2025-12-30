@@ -3,7 +3,7 @@ import React from 'react'
 import Navbar from '../Components/Navbar'
 import Hero from '../Components/Hero'
 import Search from '../Components/Search'
-import Forcast from '../Components/Forcast'
+import Weather from '../Components/Forcast'
 
 
 function Home() {
@@ -12,7 +12,7 @@ function Home() {
     <Navbar/>
     <Hero/>
     <Search/>
-    <Forcast/>
+    <Weather/>
    
     
     <style>{`body { overflow-x: hidden; }`}</style>

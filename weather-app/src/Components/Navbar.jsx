@@ -6,7 +6,7 @@ import React, { useState } from 'react'
 
 function Navbar() {
   const [open, setOpen] = useState(null)
-    
+      
 
   return (
     <nav className="flex justify-between pt-10 px-20 text-white">
